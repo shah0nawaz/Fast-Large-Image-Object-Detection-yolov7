@@ -15,6 +15,6 @@ The structural pipeline of presented solution is shown in figure below:
 python test.py 
 ```
 Thanks to these open source repos
-https://github.com/WongKinYiu/yolov7
-https://github.com/avanetten/yoltv4
+https://github.com/WongKinYiu/yolov7  
+https://github.com/avanetten/yoltv4  
 https://www.kaggle.com/datasets/towardsentropy/oil-storage-tanks
