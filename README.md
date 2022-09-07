@@ -11,6 +11,6 @@ The structural pipeline of presented solution is shown in figure below:
 
 
 ## Testing
-'''
-
-'''
+```
+python test.py 
+```
