@@ -8,7 +8,7 @@ Our framework takes batch input. Here comes, multithreading to handle batch of i
 Each cop is passed through Yolo. In this stage object detection is performed. Detailed architecture of Yolov7 can be found on https://arxiv.org/abs/2207.02696
 Yolo plots detection boxes on the cropped chunks (without global context of large-scale image). Now its required to stitch small crops of images to get back original large-scale images. Therefore, remapping of detection boxes of cropped images is also required to be post processed and get them plotted on large scale image. To achieve this goal, normalization followed by globalization of coordinates is done. At this stage, another problem arises due to overlapped crops. We get overlapping detection boxes due to underlying overlapped crops. This problem is solver by non max suppression. This will be second NMS in overall pipeline. In this way, we will get rid of overlapping detection boxes. The power of multiprocessing is also utilized for NMS to knock redundant detection boxes.
 The structural pipeline of presented solution is shown in figure below:
-![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/diagrams/Fast-Yoltv7.png)
+![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/diagrams/Fast-Large-Image-Object-Detection-yolov7.png)
 
 
 ## Testing
