@@ -18,4 +18,5 @@ python test.py
 Thanks to these open source repos  
 https://github.com/WongKinYiu/yolov7  
 https://github.com/avanetten/yoltv4  
-https://www.kaggle.com/datasets/towardsentropy/oil-storage-tanks
+https://www.kaggle.com/datasets/towardsentropy/oil-storage-tanks  
+https://github.com/shah0nawaz/Oil-Storage-Tanks-Data-Preparation-YOLO-Format
