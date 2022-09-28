@@ -10,10 +10,14 @@ Yolo plots detection boxes on the cropped chunks (without global context of larg
 The structural pipeline of presented solution is shown in figure below:
 ![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/diagrams/Fast-Large-Image-Object-Detection-yolov7.png)
 
-## Training
+
 ## Dataset Preparation 
 The oil yolov7 model is trained on oil storage tanks (OST) dataset https://www.kaggle.com/datasets/airbusgeo/airbus-oil-storage-detection-dataset. If any object detection researcher or practitioner wants to reproduce the resutls. Here is the data preparation procedure of OST dataset.
 The detailed data preparation procedure is explained in the https://github.com/shah0nawaz/Oil-Storage-Tanks-Data-Preparation-YOLO-Format.
+
+## Training (yolov7)
+Once the dataset is in yolo format, the procedure for training the object detection model as same as expained in yolov7 original repository https://github.com/WongKinYiu/yolov7.
+
 
 ## Testing
 ```
