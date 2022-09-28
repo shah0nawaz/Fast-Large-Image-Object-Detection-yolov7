@@ -11,7 +11,9 @@ The structural pipeline of presented solution is shown in figure below:
 ![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/diagrams/Fast-Large-Image-Object-Detection-yolov7.png)
 
 ## Training
-## Oil Storage Tanks Dataset
+## Dataset Preparation 
+The oil yolov7 model is trained on oil storage tanks (OST) dataset https://www.kaggle.com/datasets/airbusgeo/airbus-oil-storage-detection-dataset. If any object detection researcher or practitioner wants to reproduce the resutls. Here is the data preparation procedure of OST dataset.
+The detailed data preparation procedure is explained in the https://github.com/shah0nawaz/Oil-Storage-Tanks-Data-Preparation-YOLO-Format.
 
 ## Testing
 ```
