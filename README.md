@@ -10,6 +10,8 @@ Yolo plots detection boxes on the cropped chunks (without global context of larg
 The structural pipeline of presented solution is shown in figure below:
 ![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/diagrams/Fast-Large-Image-Object-Detection-yolov7.png)
 
+## Training
+## Oil Storage Tanks Dataset
 
 ## Testing
 ```
