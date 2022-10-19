@@ -9,6 +9,7 @@ import tqdm
 import numpy as np
 import cv2
 import torch
+from datetime import datetime
 from yolov7.utils.dataloader import CustomImageDataset
 from torch.utils.data import DataLoader
 from preprocess.slicing import CropFast
@@ -24,10 +25,11 @@ class YOLT7:
         self.step_size = opt.step_size
         self.second_conf_thresh = opt.second_conf_thresh
         self.input = opt.input
+        self.final_results = str(datetime.now().time()) + '/'
         self.crops_list_file = opt.crops_list_file
         self.cropfast = CropFast(self.input, self.save_crops, self.crop_size, self.step_size)
         self.preprocess = PreProcess(self.save_crops, self.crops_list_file)
-        self.postprocess = PostProcess('yolov7/tmp_data/results.txt', self.crop_size, self.second_conf_thresh )
+        self.postprocess = PostProcess('yolov7/tmp_data/results.txt', self.final_results ,self.crop_size, self.second_conf_thresh )
 
         if os.path.exists('yolov7/tmp_data/'):
             shutil.rmtree('yolov7/tmp_data/')
@@ -47,6 +49,9 @@ class YOLT7:
             os.mkdir(opt.save_crops)
         else:
             os.mkdir(opt.save_crops)
+
+        os.mkdir(self.final_results)
+
 
     def detect(self, opt, save_img=False):
         class_names = opt.names
@@ -124,7 +129,6 @@ class YOLT7:
 
                             l = ' '.join(str(e) for e in l)
                             f.write(l + '\n')
-        print(f'Done. ({time.time() - t0:.3f}s)')
 
     def main(self, opt):
         self.cropfast.slicing_patches()
@@ -132,7 +136,7 @@ class YOLT7:
         ts = time.time()
         with torch.no_grad():
             self.detect(opt)
-        print(f'time taken by detection{time.time()-ts}')
+        print(f'Total Detection Time : {time.time()-ts}s')
         global_df = self.postprocess.globalize_coordinates()
         name_groups = self.postprocess.separate_image_results(global_df)
         tnmsp1 =time.time()
@@ -140,7 +144,7 @@ class YOLT7:
         with concurrent.futures.ThreadPoolExecutor() as executor:
             results = executor.map(self.nms_thread, images_results_list)
         tnmsp2 = time.time()
-        print(f'Ploting and NMS time: {tnmsp2 - tnmsp1}')
+        print(f' Total Plotting and NMS time: {tnmsp2 - tnmsp1}s')
 
     def nms_thread(self , image_name_bboxes):
         name, image_bboxes = image_name_bboxes
@@ -156,6 +160,7 @@ if __name__=='__main__':
     parser.add_argument('--crop_size', type=int, default=640, help='size of crop')
     parser.add_argument('--step_size', type=int, default=500, help='stride for slicing')
     parser.add_argument('--crops_list_file', type=str, default='yolov7/tmp_data/images_list.txt')
+    parser.add_argument('--final_results', type=str, default='result/')
     parser.add_argument('--weights', nargs='+', type=str, default='./yolov7/ost.pt', help='model.pt path(s)')
     parser.add_argument('--img_size', type=int, default=640, help='inference size (pixels)')
     parser.add_argument('--conf-thres', type=float, default=0.2, help='object confidence threshold')
@@ -179,4 +184,4 @@ if __name__=='__main__':
     t1 = time.time()
     yolt7 = YOLT7(opt)
     yolt7.main(opt)
-    print(f'total time taken {time.time()-t1}')
+    print(f' Total time taken {time.time()-t1}s')

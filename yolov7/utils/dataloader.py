@@ -13,28 +13,22 @@ class CustomImageDataset(Dataset):
     def __init__(self, files_list, transform = None):
         self.img_dir = pd.read_csv(files_list)
         self.transform = transform
-        
-        
+
     def extract_name(self, path):
         name = path.split('/')[-1].split('.')[0]
         return name
-        
-        
+
     def __len__(self):
         return len(self.img_dir)
         
     def __getitem__(self, idx):
         path = self.img_dir.iloc[idx,0]
-        #print(self.path)
-        
         img = cv2.imread(path)
         name = self.extract_name(path)
-        #img = cv2.resize(img, (640,640))
         img = img[:, :, ::-1].transpose(2, 0, 1)  # BGR to RGB, to 3x416x416
         img = np.ascontiguousarray(img)
-        #print(type(img))
         img = img/255.0
-        #print(type(img))
+        print(name)
         
         return img, name
 

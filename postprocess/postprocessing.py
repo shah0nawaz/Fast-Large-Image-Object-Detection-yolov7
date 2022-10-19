@@ -8,10 +8,11 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 
 class PostProcess:
 
-    def __init__(self, yolo_result, crop_size, second_conf_thresh):
+    def __init__(self, yolo_result, final_results,crop_size, second_conf_thresh):
         self.second_conf_thresh = second_conf_thresh
         self.crop_size = crop_size
         self.yolo_result = yolo_result
+        self.final_results = final_results
 
     def save_image(self, path, image, name=''):
         cv2.imwrite(path + name, image)
@@ -55,7 +56,7 @@ class PostProcess:
             y1 = int(row.y_min)
             y2 = int(row.y_max)
             img = cv2.rectangle(img, (x1, y1), (x2, y2), (255,0,0), 2)
-        cv2.imwrite('results/' + name + '.jpg', img)
+        cv2.imwrite(self.final_results + name + '.jpg', img)
 
     def iou(self, box1, box2):
         box1 = torch.tensor(box1)
