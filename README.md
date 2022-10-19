@@ -27,6 +27,13 @@ Once the dataset is in yolo format, the procedure for training the object detect
 ```
 python test.py 
 ```
+## Testing Results
+
+![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/results/588fc1fb-b86a-4fb4-8161-d9bd3a1556ca.jpg)
+
+
+
+
 ## Validation Results
 ![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/diagrams/confusion_matrix.png)
 
