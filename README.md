@@ -29,7 +29,7 @@ python test.py
 ```
 ## Testing Results
 
-![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/results/588fc1fb-b86a-4fb4-8161-d9bd3a1556ca.jpg)    |    ![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/results/605ffac0-69d5-4748-92c2-48d43f51afc1.jpg)
+![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/results/588fc1fb-b86a-4fb4-8161-d9bd3a1556ca.jpg)|![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/results/605ffac0-69d5-4748-92c2-48d43f51afc1.jpg)
 
 
 
