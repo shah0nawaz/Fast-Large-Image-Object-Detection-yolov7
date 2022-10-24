@@ -40,13 +40,19 @@ Results             |  results
 
 
 ## Validation Results
-![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/diagrams/confusion_matrix.png)
+Confusion Matrix             |  P Curve
+:-------------------------:|:-------------------------:
+![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/diagrams/confusion_matrix.png)  |  ![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/diagrams/P_curve.png)
 
-![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/diagrams/P_curve.png)
 
-![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/diagrams/R_curve.png)
 
-![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/diagrams/PR_curve.png)
+Confusion Matrix             |  P Curve
+:-------------------------:|:-------------------------:
+![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/diagrams/R_curve.png)  |  ![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/diagrams/PR_curve.png)
+
+#![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/diagrams/R_curve.png)
+
+#![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/diagrams/PR_curve.png)
 
 ![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/diagrams/F1_curve.png)
 
