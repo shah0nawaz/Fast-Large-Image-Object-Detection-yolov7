@@ -49,8 +49,11 @@ R Curve             |  PR Curve
 :-------------------------:|:-------------------------:
 ![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/diagrams/R_curve.png)  |  ![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/diagrams/PR_curve.png)
 
+R Curve             |  PR Curve
+:-------------------------:|:-------------------------:
+![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/diagrams/F1_curve.png)  |  
 
-![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/diagrams/F1_curve.png)
+#![alt text](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7-/blob/main/diagrams/F1_curve.png)
 
 Thanks to these open source repos  
 https://github.com/WongKinYiu/yolov7  
